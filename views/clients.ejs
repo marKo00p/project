@@ -1,0 +1,24 @@
+<div class="clients-body">
+    <table id="clients-table" class="display" style="width: 100%">
+        <thead>
+        <tr><th>Client_id</th><th>Client_fist_name</th><th>Client_last_name</th><th>City_name</th><th>Email_address</th><th>Telephone_number</th><th>Password</th></tr>
+        </thead>
+        <tbody>
+        <tr><td data-name="Client_id"></td><th data-name="Client_fist_name"></td><td data-name="Client_last_name"></td><td data-name="City_name"></td><th data-name="Email_address"></td><td data-name="Telephone_number"></td><td data-name="Password"></td></tr>
+
+       </tbody>
+    </table>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script>
+
+    $('#clients-table').DataTable({
+        "serverside": true,
+        "ajax": {
+            url: '/clients_list',
+            type: "get",
+            data: function (d) {
+            }
+        }
+    })
+</script>
